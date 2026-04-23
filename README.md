@@ -21,8 +21,11 @@ Useful scripts:
 ```bash
 npm run typecheck
 npm run build
+npm run build:pages
 npm run preview
 ```
+
+`npm run build` is the normal local production build. `npm run build:pages` produces the GitHub Pages version with the repository base path baked in.
 
 ## What It Includes
 
@@ -41,6 +44,24 @@ npm run preview
 - `src/data.ts`: synthetic market data and AG-style column definitions
 - `src/App.tsx`: demo UI, presets, benchmark panel, and interaction inspector
 - `src/index.ts`: public exports for reusing the grid component
+
+## Deploy To GitHub Pages
+
+This repo is configured for GitHub Pages project-site deployment at:
+
+- [https://rickono.github.io/canvas-grid/](https://rickono.github.io/canvas-grid/)
+
+To enable it in GitHub:
+
+1. Open the repository settings for Pages.
+2. Under Build and deployment, set Source to `GitHub Actions`.
+3. Push to `main` and wait for the `Deploy to GitHub Pages` workflow to finish.
+
+For a local Pages-style build check, run:
+
+```bash
+npm run build:pages
+```
 
 ## Example
 
